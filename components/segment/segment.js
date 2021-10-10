@@ -4,14 +4,13 @@ Component({
    * Component properties
    */
   properties: {
-
+    brands: Array
   },
 
   /**
    * Component initial data
    */
   data: {
-
   },
 
   /**

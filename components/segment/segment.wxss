@@ -4,12 +4,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
-  width: 100%;
+  width: 95%;
+  margin: auto;
 }
 
 .card {
   border: solid 1px;
   border-radius: 10px;
-  width: 100px;
-  height: 60px;
+  width: 164px;
+  height: 74px;
+  margin: auto;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
 }
