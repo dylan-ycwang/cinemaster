@@ -1,6 +1,11 @@
 <view>cinemaster logo</view>
-<view>image</view>
-<view><image src="/images/banner.svg"></image></view>
+<view class="banner mx32">
+<view class="banner-fill"></view>
+<view class="banner-image"><image class="banner-image" mode="heightFix" src="/images/banner.svg"></image></view>
+
+<view class="mx60 py120 banner-text">创立于1999年的Cinemaster影音大师是中国最优秀的影音娱乐整体解决方案提供商和国际音响品牌代理商。</view>
+</view>
+
 <view>
   <segment brands="{{audioBrands}}"/>
 </view>

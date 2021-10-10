@@ -1,4 +1,32 @@
 /**index.wxss**/
+.banner{
+  position: relative;
+  background-color: #E9F0EE;
+  border-radius: 40rpx;
+}
+.banner-fill {
+  position: relative;
+  background-color: #256657;
+  opacity:10%;
+  z-index: 2;
+  /* height: 400rpx; */
+}
+
+.banner-image{
+  position: relative;
+  transform: translateY(-5rpx);
+  top: 0;
+  max-width: calc(100vw - 64rpx);
+  overflow: hidden;
+  border-radius: 7% 7% 0 0;
+  z-index: 999;
+}
+
+banner-text{
+position: relative;
+z-index: 1;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
