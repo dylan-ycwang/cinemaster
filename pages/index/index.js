@@ -8,6 +8,10 @@ Page({
     brands: [1,1,1,1],
     audioBrands: [],
     hifiBrands:[],
+    accessoryBrands: [],
+    acousticBrands: [],
+    cableBrands: [],
+    ampBrands: [],
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -34,10 +38,18 @@ Page({
     //instantiate query objects
     let queryAudio = new wx.BaaS.Query()
     let queryHifi = new wx.BaaS.Query()
+    let queryAccessory = new wx.BaaS.Query()
+    let queryAcoustics = new wx.BaaS.Query()
+    let queryCable = new wx.BaaS.Query()
+    let queryAmp = new wx.BaaS.Query()
 
     //set conditions to queries
     queryAudio.compare('brand_category', "=", '音响品牌')
     queryHifi.compare('brand_category', "=", '唱盘唱头')
+    queryAccessory.compare('brand_category', "=", '配件品牌')
+    queryAcoustics.compare('brand_category', "=", '吸音减震')
+    queryCable.compare('brand_category', "=", '线材品牌')
+    queryAmp.compare('brand_category', "=", '功放品牌')
 
     //run queries and set page data
     brandTable.setQuery(queryAudio).find().then(
@@ -58,6 +70,46 @@ Page({
         console.log("hifi brands", this.data.hifiBrands)
       }, err => {
         console.log("hifi brands error", err)
+      }
+    )
+    brandTable.setQuery(queryAccessory).find().then(
+      (res)=>{
+        this.setData({
+          accessoryBrands: res.data.objects
+        })
+        console.log("audio brands", this.data.audioBrands)
+      }, err => {
+        console.log("audio brands error", err)
+      }
+    )
+    brandTable.setQuery(queryAcoustics).find().then(
+      (res)=>{
+        this.setData({
+          acousticBrands: res.data.objects
+        })
+        console.log("audio brands", this.data.audioBrands)
+      }, err => {
+        console.log("audio brands error", err)
+      }
+    )
+    brandTable.setQuery(queryCable).find().then(
+      (res)=>{
+        this.setData({
+          cableBrands: res.data.objects
+        })
+        console.log("audio brands", this.data.audioBrands)
+      }, err => {
+        console.log("audio brands error", err)
+      }
+    )
+    brandTable.setQuery(queryAmp).find().then(
+      (res)=>{
+        this.setData({
+          ampBrands: res.data.objects
+        })
+        console.log("audio brands", this.data.audioBrands)
+      }, err => {
+        console.log("audio brands error", err)
       }
     )
     brandTable.find().then((res)=> {
