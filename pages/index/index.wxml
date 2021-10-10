@@ -13,16 +13,16 @@
   <segment brands="{{hifiBrands}}"/>
 </view>
 <view>
-  <segment brands="{{accessoryBrands}}"/>
-</view>
-<view>
-  <segment brands="{{acousticBrands}}"/>
+  <segment brands="{{ampBrands}}"/>
 </view>
 <view>
   <segment brands="{{cableBrands}}"/>
 </view>
 <view>
-  <segment brands="{{ampBrands}}"/>
+  <segment brands="{{acousticBrands}}"/>
+</view>
+<view>
+  <segment brands="{{accessoryBrands}}"/>
 </view>
 <view class="join">
   <view class="join-text">
