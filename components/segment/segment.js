@@ -13,6 +13,11 @@ Component({
   data: {
   },
 
+  // onLoad: function (options){
+  //   this.setCardInfo()
+  // },
+
+
   /**
    * Component methods
    */

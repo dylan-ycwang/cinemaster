@@ -6,8 +6,10 @@ App({
     wx.BaaS.wxExtend(wx.login,
      wx.getUserInfo,
      wx.requestPayment)
+    
+    const clientID = '0a3ec5fa38f2a1c6a950'
+    wx.BaaS.init(clientID)
 
-    wx.BaaS.init('0a3ec5fa38f2a1c6a950')
     wx.BaaS.auth.loginWithWechat() // 静默登录
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
