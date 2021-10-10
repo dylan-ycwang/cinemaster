@@ -1,0 +1,5 @@
+<view class="cards">
+  <block wx:for="{{brands}}" wx:key="index">
+    <view class="card row-center">hi</view>
+  </block>
+</view>
