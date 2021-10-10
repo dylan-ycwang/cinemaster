@@ -1,5 +1,6 @@
 <view>cinemaster logo</view>
 <view>image</view>
+<view><image src="/images/icons/test.svg"></image></view>
 <view>
   <view>音响品牌</view>
   <segment brands="{{brands}}"/>
