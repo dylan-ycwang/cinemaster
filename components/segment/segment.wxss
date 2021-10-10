@@ -1,0 +1,15 @@
+/* components/segment.wxss */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  width: 100%;
+}
+
+.card {
+  border: solid 1px;
+  border-radius: 10px;
+  width: 100px;
+  height: 60px;
+}
