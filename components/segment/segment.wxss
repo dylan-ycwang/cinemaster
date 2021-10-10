@@ -42,5 +42,5 @@
   height: 4px;
   width: 73px;
   position: absolute;
-  bottom: 3px;
+  bottom: 4px;
 }
