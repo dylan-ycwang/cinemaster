@@ -2,14 +2,14 @@
 <view>image</view>
 <view><image src="/images/banner.svg"></image></view>
 <view>
-  <view>音响品牌</view>
   <segment brands="{{audioBrands}}"/>
 </view>
 <view>
-  <view>唱盘唱头</view>
   <segment brands="{{hifiBrands}}"/>
 </view>
-<view>
-  <view>有意愿成为我们的经销商？</view>
-  <view>影音大师招商热线：400-820-5607</view>
+<view class="join">
+  <view class="join-text">
+    <view class="my20">有意愿成为我们的经销商?</view>
+    <view class="my20">影音大师招商热线：400-820-5607</view>
+  </view>
 </view>

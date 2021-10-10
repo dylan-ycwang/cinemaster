@@ -17,3 +17,18 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.join {
+  width: 343px;
+  height: 116px;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  border: 1px solid;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.join-text {
+  margin-left: 30px;
+}

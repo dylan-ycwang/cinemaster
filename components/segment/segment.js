@@ -22,6 +22,10 @@ Component({
    * Component methods
    */
   methods: {
-
+    goToBrand(e) {
+      const brand_id = e.currentTarget.dataset.id
+      console.log(brand_id)
+      // wx.navigate to function and pass brand_id into it
+    }
   }
 })

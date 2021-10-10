@@ -1,11 +1,14 @@
 /* components/segment.wxss */
+.container{
+  width: 95%;
+  margin: auto;
+  margin: 10px;
+}
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
-  width: 95%;
-  margin: auto;
 }
 
 .card {
@@ -14,9 +17,30 @@
   width: 164px;
   height: 74px;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  height: 30px;
-  width: 30px;
+  max-width: 100px;
+  max-height: 30px;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.title-name {
+}
+
+.title-color { 
+  background-color: #256657;
+  opacity: 70%;
+  height: 4px;
+  width: 73px;
+  position: absolute;
+  bottom: 3px;
 }
