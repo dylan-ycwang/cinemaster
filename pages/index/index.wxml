@@ -1,13 +1,13 @@
 <view>cinemaster logo</view>
 <view>image</view>
-<view><image src="/images/icons/test.svg"></image></view>
+<view><image src="/images/banner.svg"></image></view>
 <view>
   <view>音响品牌</view>
-  <segment brands="{{brands}}"/>
+  <segment brands="{{audioBrands}}"/>
 </view>
 <view>
   <view>唱盘唱头</view>
-  <segment brands="{{brands}}"/>
+  <segment brands="{{hifiBrands}}"/>
 </view>
 <view>
   <view>有意愿成为我们的经销商？</view>

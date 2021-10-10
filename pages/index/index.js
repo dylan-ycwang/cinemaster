@@ -6,6 +6,8 @@ Page({
   data: {
     motto: 'Hello World',
     brands: [1,1,1,1],
+    audioBrands: [],
+    hifiBrands:[],
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -19,12 +21,52 @@ Page({
     })
   },
   onLoad() {
+    this.setCardInfo()
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
       })
     }
   },
+  setCardInfo () {
+    //define the table
+    let brandTable = new wx.BaaS.TableObject('brandinfo')
+    //instantiate query objects
+    let queryAudio = new wx.BaaS.Query()
+    let queryHifi = new wx.BaaS.Query()
+
+    //set conditions to queries
+    queryAudio.compare('brand_category', "=", '音响品牌')
+    queryHifi.compare('brand_category', "=", '唱盘唱头')
+
+    //run queries and set page data
+    brandTable.setQuery(queryAudio).find().then(
+      (res)=>{
+        this.setData({
+          audioBrands: res.data.objects
+        })
+        console.log("audio brands", this.data.audioBrands)
+      }, err => {
+        console.log("audio brands error", err)
+      }
+    )
+    brandTable.setQuery(queryHifi).find().then(
+      (res)=>{
+        this.setData({
+          hifiBrands: res.data.objects
+        })
+        console.log("hifi brands", this.data.hifiBrands)
+      }, err => {
+        console.log("hifi brands error", err)
+      }
+    )
+    brandTable.find().then((res)=> {
+      console.log("all brands",res)
+    }, err => {
+      console.log("error", err)
+    })
+  },
+
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
     wx.getUserProfile({
