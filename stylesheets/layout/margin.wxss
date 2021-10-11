@@ -16,6 +16,7 @@
 .mb50 { margin-bottom: 50rpx !important; }
 .mb60 { margin-bottom: 60rpx !important; }
 .mb100 { margin-bottom: 100rpx !important; }
+.mb120 { margin-bottom: 120rpx !important; }
 .mb200 { margin-bottom: 200rpx !important; }
 .mb300 { margin-bottom: 300rpx !important; }
 

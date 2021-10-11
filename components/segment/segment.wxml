@@ -1,6 +1,6 @@
 <view class="container">
   <view class="title">
-    <view class="title-name">{{brands[0].brand_category}}</view>
+    <view class="title-name ">{{brands[0].brand_category}}</view>
     <view class="title-color"></view>
   </view>
   <view class="cards">
@@ -8,4 +8,5 @@
       <view class="card row-center" bindtap="goToBrand" data-id="{{item.id}}"><image class="logo" src="{{item.logo}}"></image></view>
     </block>
   </view>
+  <view class="divider"></view>
 </view>

@@ -3,7 +3,7 @@
 <view class="banner-fill"></view>
 <view class="banner-image"><image class="banner-image" mode="heightFix" src="/images/banner.svg"></image></view>
 
-<view class="mx60 py120 banner-text">创立于1999年的Cinemaster影音大师是中国最优秀的影音娱乐整体解决方案提供商和国际音响品牌代理商。</view>
+<view class="mx60 py120 f36 banner-text">创立于1999年的Cinemaster影音大师是中国最优秀的影音娱乐整体解决方案提供商和国际音响品牌代理商。</view>
 </view>
 
 <view>
@@ -24,9 +24,9 @@
 <view>
   <segment brands="{{accessoryBrands}}"/>
 </view>
-<view class="join">
+<view class="join mb120 ">
   <view class="join-text">
-    <view class="my20">有意愿成为我们的经销商?</view>
-    <view class="my20">影音大师招商热线：400-820-5607</view>
+    <view class="my20 f30">有意愿成为我们的经销商?</view>
+    <view class="my20 f36">影音大师招商热线：400-820-5607</view>
   </view>
 </view>
