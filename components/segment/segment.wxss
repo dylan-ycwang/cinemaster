@@ -29,7 +29,8 @@
 
 .title {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-top: 120rpx;
+  margin-bottom: 64rpx;
   position: relative;
 }
 
@@ -43,4 +44,12 @@
   width: 73px;
   position: absolute;
   bottom: 4px;
+}
+
+.divider {
+  height: 2rpx;
+  /* width: calc(100vw - 64rpx); */
+  margin: 120rpx 32rpx 0;
+  background-color: #000000;
+  /* margin-top: 120rpx; */
 }
