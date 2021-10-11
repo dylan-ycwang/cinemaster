@@ -5,7 +5,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    brand: Object
   },
 
   /**
@@ -17,9 +17,22 @@ Page({
   setBrandInfo() {
     let brandTable = new wx.BaaS.TableObject('brandinfo')
     let that = this
-    let queryAudio = new wx.BaaS.Query()
-    console.log(that.options)
-    // queryBrand.compare('_id', "=", that.options.id)
+    let queryBrand = new wx.BaaS.Query()
+    let brandID = that.options.id
+    console.log(that.options.id)
+
+    queryBrand.compare('_id', "=", brandID)
+
+    brandTable.setQuery(queryBrand).find().then(
+      (res)=>{
+        this.setData({
+          brand: res.data.objects[0]
+        })
+        console.log("brand data", this.data.brand)
+      }, err => {
+        console.log("brand data error", err)
+      }
+    )
   },
 
   /**

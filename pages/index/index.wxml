@@ -33,7 +33,3 @@
     </view>
   </view>
 </view>
-
-<view bindtap="naviagteTM">Test link</view>
-
-<web-view src="http://tbtzv0003.cn/VYOIBj"></web-view>
