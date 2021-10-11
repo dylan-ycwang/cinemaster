@@ -12,7 +12,14 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+  },
 
+  setBrandInfo() {
+    let brandTable = new wx.BaaS.TableObject('brandinfo')
+    let that = this
+    let queryAudio = new wx.BaaS.Query()
+    console.log(that.options)
+    // queryBrand.compare('_id', "=", that.options.id)
   },
 
   /**
@@ -26,7 +33,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    this.setBrandInfo();
   },
 
   /**
