@@ -1,8 +1,8 @@
-<view>cinemaster logo</view>
+<view class="main-logo"><image class="mb60 mt30" src="/images/CInemaster.svg"></image></view>
 <view class="banner mx32">
-<view class="banner-fill"></view>
-<view class="banner-image"><image class="banner-image" mode="heightFix" src="/images/banner.svg"></image></view>
-
+<view class="banner-fill">
+  <view class="banner-image"><image class="banner-image" mode="widthFix" src="/images/banner.svg"></image></view>
+</view>
 <view class="mx60 py120 f36 banner-text">创立于1999年的Cinemaster影音大师是中国最优秀的影音娱乐整体解决方案提供商和国际音响品牌代理商。</view>
 </view>
 
@@ -24,9 +24,16 @@
 <view>
   <segment brands="{{accessoryBrands}}"/>
 </view>
-<view class="join mb120 ">
-  <view class="join-text">
+<view class="join mb120" bindtap="makePhoneCall">
+  <view class="join-text flex column">
     <view class="my20 f30">有意愿成为我们的经销商?</view>
-    <view class="my20 f36">影音大师招商热线：400-820-5607</view>
+    <view class="flex row-around">
+      <view class="my20 f36 dib grow"> 影音大师招商热线：400-820-5607</view>
+      <view><image class="icon-call" src="/images/icons/carbon_phone-outgoing-filled.svg"></image></view>
+    </view>
   </view>
 </view>
+
+<view bindtap="naviagteTM">Test link</view>
+
+<web-view src="http://tbtzv0003.cn/VYOIBj"></web-view>

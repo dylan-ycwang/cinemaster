@@ -1,22 +1,35 @@
 /**index.wxss**/
+.main-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-logo image{
+  height: 90rpx;
+  /* margin-top: 24rpx;
+  margin-bottom: 60rpx; */
+}
 .banner{
-  position: relative;
+  /* position: relative; */
   background-color: #E9F0EE;
   border-radius: 40rpx;
+
 }
 .banner-fill {
-  position: relative;
-  background-color: #256657;
-  opacity:10%;
+  /* position: relative; */
+  background-color: #E9F0EE;
+  mix-blend-mode: multiply;
+  /* opacity:10%; */
+  border-radius: 7% 7% 0 0;
   z-index: 2;
-  /* height: 400rpx; */
+  height: 400rpx;
 }
 
 .banner-image{
-  position: relative;
-  transform: translateY(-5rpx);
+  /* position: relative; */
+  /* transform: translateY(-5rpx); */
   top: 0;
-  max-width: calc(100vw - 64rpx);
+  min-width: calc(100vw - 64rpx);
   overflow: hidden;
   border-radius: 7% 7% 0 0;
   z-index: 999;
@@ -47,18 +60,25 @@ z-index: 1;
 }
 
 .join {
-  width: 343px;
+  margin: 120rpx 32rpx;
+  width: calc (100vw - 64rpx);
   height: 116px;
   background-color: #030303;
   color: #F5F5F5;
   border-radius: 20px;
   border: 1px solid;
-  margin: auto;
-  margin-top: 120rpx;
   display: flex;
   align-items: center;
 }
 
 .join-text {
   margin-left: 20px;
+}
+
+.icon-call{
+  height: 36rpx;
+  width: 36rpx;
+  transform: translateY(2px);
+  margin-left: 6rpx;
+
 }
