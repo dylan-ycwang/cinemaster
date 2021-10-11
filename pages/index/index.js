@@ -26,6 +26,12 @@ Page({
   },
   onLoad() {
     this.setCardInfo()
+
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
+
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
@@ -117,6 +123,16 @@ Page({
     }, err => {
       console.log("error", err)
     })
+  },
+
+  makePhoneCall(){
+    wx.makePhoneCall({
+      phoneNumber: '4008205607',
+    })
+  },
+
+  naviagteTM(){
+    
   },
 
   getUserProfile(e) {
