@@ -37,21 +37,26 @@ Page({
   },
 
   setAllBrands() {
-    let brandTable = new wx.BaaS.TableObject('brandinfo')
-    brandTable.find().then(
-      (res)=>{
-        this.setData({
-          allBrands: res.data.objects,
-        })
-        console.log("all brands ", this.data.allBrands.findIndex(x => x.id === this.data.brand.id) + 1)
-      }, err => {
-        console.log("all brand", err)
-      }
-    )
+    return new Promise((resolve, reject) => {
+      let brandTable = new wx.BaaS.TableObject('brandinfo')
+      brandTable.find().then(
+        (res)=>{
+          this.setData({
+            allBrands: res.data.objects,
+          })
+          console.log("all brands ", this.data.allBrands)
+        }, err => {
+          console.log("all brand", err)
+        }
+      ),
+      resolve(this.data.allBrands)
+    });
   },
 
   setNextBrand() {
-    console.log(this.data.allBrands)
+    this.setAllBrands().then(res => {
+      console.log("hi", this.data.allBrands)
+    })
   },
 
 
