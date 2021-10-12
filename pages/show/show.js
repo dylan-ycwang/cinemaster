@@ -5,14 +5,34 @@ Page({
    * Page initial data
    */
   data: {
-
+    brand: Object
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+  },
 
+  setBrandInfo() {
+    let brandTable = new wx.BaaS.TableObject('brandinfo')
+    let that = this
+    let queryBrand = new wx.BaaS.Query()
+    let brandID = that.options.id
+    console.log(that.options.id)
+
+    queryBrand.compare('_id', "=", brandID)
+
+    brandTable.setQuery(queryBrand).find().then(
+      (res)=>{
+        this.setData({
+          brand: res.data.objects[0]
+        })
+        console.log("brand data", this.data.brand)
+      }, err => {
+        console.log("brand data error", err)
+      }
+    )
   },
 
   /**
@@ -26,7 +46,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    this.setBrandInfo();
   },
 
   /**

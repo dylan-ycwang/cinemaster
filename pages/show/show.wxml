@@ -1,2 +1,32 @@
-<!--pages/show.wxml-->
-<text>pages/show.wxml</text>
+<view class="container">
+  <view>
+    <image src="{{brand.logo}}"></image>
+  </view>
+  <view class="block">
+    <view class="title">
+      <view class="title-name">品牌介绍</view>
+      <view class="title-color"></view>
+    </view>
+    <view class="summary">{{brand.brand_summary}}</view>
+  </view>
+  <view class="block">
+    <view class="title">
+      <view class="title-name">品牌历史</view>
+      <view class="title-color"></view>
+    </view>
+    <view class="summary">{{brand.brand_story}}</view>
+  </view>
+  <view class="block" id="info">
+    <view class="website">
+      <view>了解更多品牌信息</view>
+      <view class="links">
+        <view class="website">
+          <view>进入品牌官网</view>
+        </view>
+        <view class="website">
+          <view>逛逛天猫旗舰店</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

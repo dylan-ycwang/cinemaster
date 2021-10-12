@@ -1,1 +1,44 @@
-/* pages/show.wxss */
+.container {
+  margin: 0rpx 32rpx;
+}
+.block {
+  background-color: #F5F5F5;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  position: relative;
+}
+
+.title {
+  font-size: 18px;
+  position: relative;
+}
+
+.title-name {
+  padding-top: 48rpx;
+  padding-left: 48rpx;
+}
+
+.title-color { 
+  background-color: #256657;
+  opacity: 70%;
+  height: 4px;
+  width: 73px;
+  position: absolute;
+  bottom: 4px;
+  margin-left: 48rpx;
+}
+
+.summary {
+  margin: 32rpx 48rpx 64rpx 48rpx;
+  padding-bottom: 64rpx;
+}
+
+#info {
+  margin-bottom: 178rpx;
+}
+
+.website {
+  padding-top: 36rpx;
+  padding-bottom: 60rpx;
+  margin-left: 48rpx;
+}

@@ -24,6 +24,9 @@ Component({
   methods: {
     goToBrand(e) {
       const brand_id = e.currentTarget.dataset.id
+      wx.navigateTo({
+        url: `../../pages/show/show?id=${brand_id}`,
+      })
       console.log(brand_id)
       // wx.navigate to function and pass brand_id into it
     }
