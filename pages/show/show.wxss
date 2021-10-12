@@ -1,5 +1,5 @@
 .container {
-  margin: 0rpx 32rpx;
+  margin: 0rpx 16rpx;
 }
 .block {
   background-color: #F5F5F5;
@@ -34,11 +34,48 @@
 }
 
 #info {
-  margin-bottom: 178rpx;
+  margin-bottom: 80rpx;
+  border: 1px solid
 }
 
 .website {
   padding-top: 36rpx;
   padding-bottom: 60rpx;
   margin-left: 48rpx;
+  display: flex;
+  justify-content: end;
+  margin-right: 20rpx;
+}
+
+.icon {
+  height: 32rpx;
+  width: 36rpx;
+  margin-top: 6rpx;
+  margin-right: 10rpx;
+}
+
+.links {
+  display: flex;
+}
+
+.banner {
+  padding-top: 36rpx;
+  margin-left: 48rpx;
+}
+
+.bottom-bar {
+  width: 686rpx;
+  height: 148rpx;
+  background-color:black;
+  border-radius: 40rpx;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  margin-bottom: 178rpx;
+}
+
+.linebreak {
+  white-space: pre-line;
 }

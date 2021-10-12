@@ -5,7 +5,9 @@ Page({
    * Page initial data
    */
   data: {
-    brand: Object
+    brand: Object,
+    allBrands: Array,
+    nextBrand: Object,
   },
 
   /**
@@ -19,7 +21,6 @@ Page({
     let that = this
     let queryBrand = new wx.BaaS.Query()
     let brandID = that.options.id
-    console.log(that.options.id)
 
     queryBrand.compare('_id', "=", brandID)
 
@@ -35,6 +36,25 @@ Page({
     )
   },
 
+  setAllBrands() {
+    let brandTable = new wx.BaaS.TableObject('brandinfo')
+    brandTable.find().then(
+      (res)=>{
+        this.setData({
+          allBrands: res.data.objects,
+        })
+        console.log("all brands ", this.data.allBrands.findIndex(x => x.id === this.data.brand.id) + 1)
+      }, err => {
+        console.log("all brand", err)
+      }
+    )
+  },
+
+  setNextBrand() {
+    console.log(this.data.allBrands)
+  },
+
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -47,6 +67,8 @@ Page({
    */
   onShow: function () {
     this.setBrandInfo();
+    this.setAllBrands();
+    this.setNextBrand();
   },
 
   /**
