@@ -1,8 +1,12 @@
-<view class="container">
-  <view>
-    <image src="{{brand.logo}}"></image>
+<view class="semicircle flex justify-center">
+    <image class="semicircle" mode="widthFix" src="/images/semicircle.svg"></image>
   </view>
-  <view class="block">
+<view class="container pt10">
+    <view class="mt200 logo-container flex justify-center items-center mb0 pb0">
+      <image class="logo" mode="heightFix" src="{{brand.logo}}"></image>
+    </view>
+
+  <view class="block translate">
     <view class="title">
       <view class="title-name">品牌介绍</view>
       <view class="title-color"></view>
@@ -11,7 +15,7 @@
   </view>
   <view class="block">
     <view class="title">
-      <view class="title-name">品牌历史</view>
+      <view class="title-name">品牌特色</view>
       <view class="title-color"></view>
     </view>
     <view class="summary">{{brand.brand_story}}</view>
