@@ -43,8 +43,9 @@ Page({
         (res)=>{
           this.setData({
             allBrands: res.data.objects,
+            nextBrand: res.data.objects[res.data.objects.findIndex(x => x.id === this.data.brand.id) + 1]
           })
-          console.log("all brands ", this.data.allBrands)
+          console.log("all brands ", this.data.nextBrand)
         }, err => {
           console.log("all brand", err)
         }
@@ -53,9 +54,9 @@ Page({
     });
   },
 
-  setNextBrand() {
-    this.setAllBrands().then(res => {
-      console.log("hi", this.data.allBrands)
+  toNextBrand() {
+    wx.redirectTo({
+      url: `/pages/show/show?id=${this.data.nextBrand.id}`
     })
   },
 
@@ -73,7 +74,6 @@ Page({
   onShow: function () {
     this.setBrandInfo();
     this.setAllBrands();
-    this.setNextBrand();
   },
 
   /**

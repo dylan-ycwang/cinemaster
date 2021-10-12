@@ -31,5 +31,5 @@
       </view>
     </view>
   </view>
-  <view class="bottom-bar">下一个品牌: {{brand.brand_name}}</view>
+  <view class="bottom-bar" bindtap="toNextBrand">下一个品牌: {{nextBrand.brand_name}}</view>
 </view>
