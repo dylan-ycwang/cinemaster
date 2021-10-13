@@ -7,23 +7,43 @@
 </view>
 
 <view>
+  <view class="title">
+    <view class="title-name ">音箱品牌</view>
+    <view class="title-color"></view>
+  </view>
   <segment brands="{{audioBrands}}"/>
 </view>
 <view>
+  <view class="title">
+    <view class="title-name ">唱盘唱头</view>
+    <view class="title-color"></view>
+  </view>
   <segment brands="{{hifiBrands}}"/>
 </view>
 <view>
+  <view class="title">
+    <view class="title-name ">功放品牌</view>
+    <view class="title-color"></view>
+  </view>
   <segment brands="{{ampBrands}}"/>
 </view>
 <view>
+  <view class="title">
+    <view class="title-name ">线材品牌</view>
+    <view class="title-color"></view>
+  </view>
   <segment brands="{{cableBrands}}"/>
 </view>
 <view>
+  <view class="title">
+    <view class="title-name ">吸音减震</view>
+    <view class="title-color"></view>
+  </view>
   <segment brands="{{acousticBrands}}"/>
 </view>
-<view>
+<!-- <view> //配件品牌已删除
   <segment brands="{{accessoryBrands}}"/>
-</view>
+</view> -->
 <view class="join mb120" bindtap="makePhoneCall">
   <view class="join-text flex column">
     <view class="my20 f30">有意愿成为我们的经销商?</view>
