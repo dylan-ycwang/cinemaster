@@ -57,7 +57,7 @@
 }
 
 #info {
-  margin-bottom: 178rpx;
+  margin-bottom: 80rpx;
   border: 1px solid #000000;
 }
 

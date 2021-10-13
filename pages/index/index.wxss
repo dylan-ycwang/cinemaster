@@ -39,6 +39,25 @@ banner-text{
 position: relative;
 z-index: 1;
 }
+.title {
+  font-size: 18px;
+  margin-left: 32rpx;
+  margin-top: 120rpx;
+  margin-bottom: 64rpx;
+  position: relative;
+}
+
+.title-name {
+}
+
+.title-color { 
+  background-color: #256657;
+  opacity: 70%;
+  height: 4px;
+  width: 73px;
+  position: absolute;
+  bottom: 4px;
+}
 
 .userinfo {
   display: flex;

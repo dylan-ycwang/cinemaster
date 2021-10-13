@@ -39,15 +39,17 @@ Page({
   setAllBrands() {
     return new Promise((resolve, reject) => {
       let brandTable = new wx.BaaS.TableObject('brandinfo')
-      brandTable.find().then(
+     
+      brandTable.orderBy(['-brand_category','created_at']).limit(50).find().then(
         (res)=>{
           this.setData({
             allBrands: res.data.objects,
             nextBrand: res.data.objects[res.data.objects.findIndex(x => x.id === this.data.brand.id) + 1]
           })
-          console.log("all brands ", this.data.nextBrand)
+          console.log("all brands", this.data.allBrands)
+          console.log("next brand ", this.data.nextBrand)
         }, err => {
-          console.log("all brand", err)
+          console.log("next brand", err)
         }
       ),
       resolve(this.data.allBrands)
