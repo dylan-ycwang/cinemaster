@@ -1,0 +1,14 @@
+<!--pages/webview/webview.wxml-->
+<view class="semicircle flex justify-center">
+    <image class="semicircle" mode="widthFix" src="/images/semicircle.svg"></image>
+  </view>
+<view class="container flex row-center" wx:if="!{{url}}">
+  <view class="block row-center">
+    正在跳转中,请稍候...
+  </view>
+    
+</view>
+
+<view>
+  <web-view src="{{url}}"></web-view>
+</view>

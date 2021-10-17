@@ -1,9 +1,10 @@
 <view class="main-logo"><image class="mb60 mt30" src="/images/CInemaster.svg"></image></view>
+
 <view class="banner mx32">
 <view class="banner-fill">
   <view class="banner-image"><image class="banner-image" mode="widthFix" src="/images/banner.svg"></image></view>
 </view>
-<view class="mx60 py120 f36 banner-text">创立于1999年的Cinemaster影音大师是中国最优秀的影音娱乐整体解决方案提供商和国际音响品牌代理商。</view>
+  <view class="mx60 py120 f36 banner-text">创立于1999年的Cinemaster影音大师是中国最优秀的影音娱乐整体解决方案提供商和国际音响品牌代理商。</view>
 </view>
 
 <view>
@@ -44,6 +45,7 @@
 <!-- <view> //配件品牌已删除
   <segment brands="{{accessoryBrands}}"/>
 </view> -->
+
 <view class="join mb120" bindtap="makePhoneCall">
   <view class="join-text flex column">
     <view class="my20 f30">有意愿成为我们的经销商?</view>

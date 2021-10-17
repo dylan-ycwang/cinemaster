@@ -13,6 +13,16 @@
     </view>
     <view class="summary linebreak">{{brand.brand_summary}}</view>
   </view>
+
+<view wx:if="{{brand.brand_video}}">
+  <view class="pb60 flex justify-center">
+    <video class="video" 
+    object-fit ="cover" 
+    picture-in-picture-mode="{{['push', 'pop']}}"
+    src="{{brand.brand_video}}">
+    </video>
+  </view>
+</view>
   <view class="block">
     <view class="title">
       <view class="title-name">品牌特色</view>
@@ -24,16 +34,19 @@
     <view>
       <view  class="banner">了解更多品牌信息:</view>
       <view class="links">
-        <view class="website">
+        <view bindtap="handleToWebsite" class="website">
           <image src="../../images/icons/hand.svg" class="icon"></image>
           <view>进入品牌官网</view>
         </view>
-        <view class="website">
+        <view wx:if="{{brand.tmall_url}}" class="website" bindtap="handleToTmall">
           <image src="../../images/icons/store.svg" class="icon" id="tmall"></image>
           <view>逛逛天猫旗舰店</view>
         </view>
       </view>
     </view>
   </view>
-  <view class="bottom-bar" bindtap="toNextBrand">下一个品牌: {{nextBrand.brand_name}}</view>
+  <view class="button-home" bindtap="handleToIndex">回到所有品牌</view>
+  <view class="button-next-brand" bindtap="toNextBrand">下一个品牌: {{nextBrand.brand_name}}</view>
+
+
 </view>
