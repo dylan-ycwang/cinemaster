@@ -50,12 +50,12 @@ Page({
     let queryAmp = new wx.BaaS.Query()
 
     //set conditions to queries
-    queryAudio.compare('brand_category', "=", '音响品牌')
-    queryHifi.compare('brand_category', "=", '唱盘唱头')
-    queryAccessory.compare('brand_category', "=", '配件品牌')
-    queryAcoustics.compare('brand_category', "=", '吸音减震')
-    queryCable.compare('brand_category', "=", '线材品牌')
-    queryAmp.compare('brand_category', "=", '功放品牌')
+    queryAudio.compare('brand_category', "=", '1音箱品牌')
+    queryHifi.compare('brand_category', "=", '2唱盘唱头')
+    queryAccessory.compare('brand_category', "=", '6配件品牌')
+    queryAcoustics.compare('brand_category', "=", '5吸音减震')
+    queryCable.compare('brand_category', "=", '4线材品牌')
+    queryAmp.compare('brand_category', "=", '3功放品牌')
 
     //run queries and set page data
     brandTable.setQuery(queryAudio).find().then(
@@ -83,9 +83,9 @@ Page({
         this.setData({
           accessoryBrands: res.data.objects
         })
-        console.log("audio brands", this.data.audioBrands)
+        console.log("accessory brands", this.data.accessoryBrands)
       }, err => {
-        console.log("audio brands error", err)
+        console.log("accessory brands error", err)
       }
     )
     brandTable.setQuery(queryAcoustics).find().then(
@@ -93,9 +93,9 @@ Page({
         this.setData({
           acousticBrands: res.data.objects
         })
-        console.log("audio brands", this.data.audioBrands)
+        console.log("acoustic brands", this.data.acousticBrands)
       }, err => {
-        console.log("audio brands error", err)
+        console.log("acoustic brands error", err)
       }
     )
     brandTable.setQuery(queryCable).find().then(
@@ -103,9 +103,9 @@ Page({
         this.setData({
           cableBrands: res.data.objects
         })
-        console.log("audio brands", this.data.audioBrands)
+        console.log("cable brands", this.data.cableBrands)
       }, err => {
-        console.log("audio brands error", err)
+        console.log("cable brands error", err)
       }
     )
     brandTable.setQuery(queryAmp).find().then(
@@ -113,7 +113,7 @@ Page({
         this.setData({
           ampBrands: res.data.objects
         })
-        console.log("audio brands", this.data.audioBrands)
+        console.log("amp brands", this.data.ampBrands)
       }, err => {
         console.log("audio brands error", err)
       }

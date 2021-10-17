@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/show/show"
+    "pages/show/show",
+    "pages/webview/webview"
   ],
   "window": {
     "backgroundTextStyle": "light",

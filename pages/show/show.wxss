@@ -7,7 +7,6 @@
 }
 .logo-container{
   height: 140rpx;
-  max-width: 80vw;
   transform: translateY(-120rpx);
 }
 
@@ -76,6 +75,9 @@
   margin-top: 6rpx;
   margin-right: 10rpx;
 }
+.video{
+  min-width: 100%;
+}
 
 .links {
   display: flex;
@@ -86,7 +88,7 @@
   margin-left: 48rpx;
 }
 
-.bottom-bar {
+.button-next-brand {
   width: 686rpx;
   height: 148rpx;
   background-color:black;
@@ -96,9 +98,22 @@
   justify-content: center;
   align-items: center;
   font-size: 36rpx;
-  margin-bottom: 178rpx;
+  margin-bottom: 80rpx;
 }
-
+.button-home{
+  width: 686rpx;
+  height: 146rpx;
+  color:black;
+  border-radius: 40rpx;
+  border: 1px solid #000000;
+  background-color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  margin-top: 160rpx;
+  margin-bottom: 40rpx;
+}
 .linebreak {
   white-space: pre-line;
 }

@@ -1,0 +1,25 @@
+/* pages/webview/webview.wxss */
+.semicircle {
+  width: 200vw;
+  transform: translateY(-140rpx);
+  position: fixed;
+  left: -25vw;
+  z-index: -2;
+}
+
+.container{
+ height: 70vh;
+ width: 100vw;
+ padding: 32rpx;
+}
+
+.block {
+  background-color: #F5F5F5;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  /* position: relative; */
+  height: 300rpx;
+  width: calc(100vw - 64rpx);
+  padding: 32rpx;
+  border: 1px solid #000000;
+}

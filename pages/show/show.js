@@ -40,7 +40,7 @@ Page({
     return new Promise((resolve, reject) => {
       let brandTable = new wx.BaaS.TableObject('brandinfo')
      
-      brandTable.orderBy(['-brand_category','created_at']).limit(50).find().then(
+      brandTable.orderBy(['brand_category','created_at']).limit(50).find().then(
         (res)=>{
           this.setData({
             allBrands: res.data.objects,
@@ -61,7 +61,26 @@ Page({
       url: `/pages/show/show?id=${this.data.nextBrand.id}`
     })
   },
+  handleToWebsite(){
+    const websiteUrl = this.data.brand.website_url
 
+      wx.navigateTo({
+        url: `/pages/webview/webview?url=${websiteUrl}`,
+      })
+  },
+
+  handleToTmall(){
+    const tmallUrl = this.data.brand.tmall_url
+    
+      wx.navigateTo({
+        url: `/pages/webview/webview?url=${tmallUrl}`,
+      })
+  },
+  handleToIndex() {
+    wx.redirectTo({
+      url: '/pages/index/index',
+    })
+  },
 
   /**
    * Lifecycle function--Called when page is initially rendered
