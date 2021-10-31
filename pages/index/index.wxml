@@ -47,11 +47,13 @@
 </view> -->
 
 <view class="join mb120" bindtap="makePhoneCall">
-  <view class="join-text flex column">
+  <view class="join-text flex my40 column">
     <view class="my20 f30">有意愿成为我们的经销商?</view>
+    <view class="f36">拨打影音大师招商热线：</view>
     <view class="flex row-around">
-      <view class="my20 f36 dib grow"> 影音大师招商热线：400-820-5607</view>
       <view><image class="icon-call" src="/images/icons/carbon_phone-outgoing-filled.svg"></image></view>
+      <view class="ml20 my20 f36 dib grow"> 
+      400-820-5607 </view>
     </view>
   </view>
 </view>

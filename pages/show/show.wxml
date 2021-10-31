@@ -30,7 +30,8 @@
     </view>
     <view class="summary linebreak">{{brand.brand_story}}</view>
   </view>
-  <view class="block" id="info">
+
+  <!-- <view class="block" id="info">
     <view>
       <view  class="banner">了解更多品牌信息:</view>
       <view class="links">
@@ -44,7 +45,8 @@
         </view>
       </view>
     </view>
-  </view>
+  </view> -->
+  
   <view class="button-home" bindtap="handleToIndex">回到所有品牌</view>
   <view class="button-next-brand" bindtap="toNextBrand">下一个品牌: {{nextBrand.brand_name}}</view>
 

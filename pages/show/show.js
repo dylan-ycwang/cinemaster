@@ -8,13 +8,19 @@ Page({
     brand: Object,
     allBrands: Array,
     nextBrand: Object,
+    currentIndex: null,
+    nextBrandIndex: null
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    this.setBrandInfo();
+    this.setAllBrands();
+    // this.setNextBrandIndex()
   },
+
 
   setBrandInfo() {
     let brandTable = new wx.BaaS.TableObject('brandinfo')
@@ -39,21 +45,45 @@ Page({
   setAllBrands() {
     return new Promise((resolve, reject) => {
       let brandTable = new wx.BaaS.TableObject('brandinfo')
-     
       brandTable.orderBy(['brand_category','created_at']).limit(50).find().then(
         (res)=>{
           this.setData({
             allBrands: res.data.objects,
-            nextBrand: res.data.objects[res.data.objects.findIndex(x => x.id === this.data.brand.id) + 1]
+            currentIndex:res.data.objects.findIndex(x => x.id === this.data.brand.id),
           })
           console.log("all brands", this.data.allBrands)
-          console.log("next brand ", this.data.nextBrand)
         }, err => {
           console.log("next brand", err)
         }
+      ).then((res) => {
+        this.setNextBrandIndex()
+      }, err => {
+        console.log(err)
+      }
       ),
-      resolve(this.data.allBrands)
+      resolve(this.data.allBrands);
+      
     });
+  },
+
+  setNextBrandIndex(){
+    let currentIndex = this.data.currentIndex    
+    if (currentIndex <  this.data.allBrands.length -1 ) {
+      console.log('nextBrandIndex', currentIndex + 1)
+      this.setData ({
+        nextBrandIndex: currentIndex + 1,
+      })
+      // console.log('next brand', this.data.nextBrand)
+      // console.log("next brand index", this.data.nextBrandIndex)
+    } else {
+      this.setData ({
+        nextBrandIndex: 0,
+      })
+    }
+    const i = this.data.nextBrandIndex
+    this.setData({
+      nextBrand: this.data.allBrands[i]
+    })
   },
 
   toNextBrand() {
@@ -86,15 +116,14 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-
+    // this.setNextBrandIndex();
   },
 
   /**
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    this.setBrandInfo();
-    this.setAllBrands();
+
   },
 
   /**
@@ -122,7 +151,7 @@ Page({
    * Called when page reach bottom
    */
   onReachBottom: function () {
-
+  
   },
 
   /**
