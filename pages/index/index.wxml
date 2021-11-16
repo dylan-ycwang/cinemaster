@@ -4,7 +4,7 @@
 <view class="banner-fill">
   <view class="banner-image"><image class="banner-image" mode="widthFix" src="/images/banner.svg"></image></view>
 </view>
-  <view class="mx60 py120 f36 banner-text">创立于1999年的Cinemaster影音大师是中国最优秀的影音娱乐整体解决方案提供商和国际音响品牌代理商。</view>
+  <view class="mx60 py120 f36 banner-text">创立于1999年的Cinemaster影音大师是中国优秀的影音娱乐整体解决方案提供商和国际音响品牌代理商。</view>
 </view>
 
 <view>
